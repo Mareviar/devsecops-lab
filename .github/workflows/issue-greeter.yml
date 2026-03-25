@@ -1,0 +1,12 @@
+name: Issue Greeter
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet the new issue
+        run: |
+          echo "Привет! Спасибо за создание Issue с названием: ${{ github.event.issue.title }}. Наша команда уже работает над этим!"
